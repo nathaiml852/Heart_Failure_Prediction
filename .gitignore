@@ -24,6 +24,6 @@ Thumbs.db
 .ipynb_checkpoints/
 
 # Model artifacts
-#*.joblib
-#*.pkl
-#trained_models/
+.joblib
+.pkl
+trained_models/
