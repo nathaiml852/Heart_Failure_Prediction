@@ -1,7 +1,8 @@
 import sys
 from pathlib import Path
 file = Path(__file__).resolve()
-root = file.parents[1]
+parent, root = file.parent, file.parents[1]
+#root = file.parents[1]
 # print(file)
 # print(root)
 sys.path.append(str(root))
