@@ -4,7 +4,7 @@ Version: 0.1.0
 Summary: Heartfailure dataset classification model package 
 Author: ----------
 Author-email: ------
-License: BSD-3
+License: MIT
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
@@ -17,6 +17,7 @@ Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Programming Language :: Python :: Implementation :: PyPy
 Requires-Python: >=3.7.0
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: joblib
 Requires-Dist: numpy
 Requires-Dist: pandas
@@ -31,6 +32,7 @@ Dynamic: classifier
 Dynamic: description
 Dynamic: description-content-type
 Dynamic: license
+Dynamic: license-file
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary

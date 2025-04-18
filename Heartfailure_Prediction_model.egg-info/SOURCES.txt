@@ -1,9 +1,12 @@
+LICENSE
+README.md
 setup.py
 Heartfailure_Prediction_model.egg-info/PKG-INFO
 Heartfailure_Prediction_model.egg-info/SOURCES.txt
 Heartfailure_Prediction_model.egg-info/dependency_links.txt
 Heartfailure_Prediction_model.egg-info/requires.txt
 Heartfailure_Prediction_model.egg-info/top_level.txt
+heartfailure_model/VERSION
 heartfailure_model/__init__.py
 heartfailure_model/pipeline.py
 heartfailure_model/predict.py
