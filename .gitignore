@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# VS Code settings
+.vscode/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Data
+*.csv
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python notebooks
+.ipynb_checkpoints/
+
+# Model artifacts
+#*.joblib
+#*.pkl
+#trained_models/

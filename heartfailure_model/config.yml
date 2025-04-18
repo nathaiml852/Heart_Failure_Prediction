@@ -1,0 +1,90 @@
+# Data Files
+app_config_:
+  training_data_file: "heart.csv"
+  pipeline_save_file: "heartfailure_pipeline.pkl"
+  model_save_file: "heartfailure_model_output_v"
+
+# Model Configuration
+model_config_:
+  target: heartdisease
+  pipeline_name: heartfailure_model
+
+  features:  
+    - age
+    - sex
+    - chestpaintype
+    - restingbp
+    - cholesterol
+    - fastingbs
+    - restingecg
+    - maxhr
+    - exerciseangina
+    - oldpeak
+    - st_slope
+ 
+
+  # Mapped feature names
+  age_var: age  
+  sex_var: sex  
+  chestpaintype_var: chestpaintype  
+  restingbp_var: restingbp            
+  cholesterol_var: cholesterol  
+  fastingbs_var: fastingbs  
+  restingecg_var: restingecg  
+  maxhr_var: maxhr  
+  exerciseangina_var: exerciseangina  
+  oldpeak_var: oldpeak  
+  st_slope_var: st_slope  
+ 
+  #temp_var: 0.0  # ✅ Should be a float, default value added
+  #atemp_var: 0.0  # ✅ Should be a float, default value added
+  #hum_var: 0.0  # ✅ Should be a float, default value added
+  #windspeed_var: 0.0  # ✅ Should be a float, default value added
+  
+  
+  
+  # Unused fields
+  #unused_fields:         
+  
+
+  #drop_features:
+  
+
+
+  # Feature mappings
+  sex_mappings:
+    "M": 0
+    "F": 1
+
+  chestpaintype_mappings:
+    "ATA": 0
+    "NAP": 1
+    "ASY": 2
+    "TA": 3
+
+  restingecg_mappings:
+    "Normal": 0
+    "ST": 1 
+    "LVH": 2
+
+  exerciseangina_mappings:
+    "N": 0
+    "Y": 1
+
+  st_slope_mappings:
+    "Up": 1
+    "Flat": 0
+    "Down": 2
+
+
+  # Handle outliers
+  outliers:
+
+
+  # Train/test split
+  test_size: 0.20
+  random_state: 42
+
+  # Algorithm parameters
+  n_estimators: 150
+  max_depth: 5  
