@@ -33,7 +33,7 @@ with open(PACKAGE_DIR / "VERSION") as f:
 
 # What packages are required for this module to be executed?
 def list_reqs(fname="requirements.txt"):
-    with open(REQUIREMENTS_DIR / fname) as fd:
+    with open(fname) as fd:
         return fd.read().splitlines()
 
 # Where the magic happens:
@@ -51,7 +51,7 @@ setup(
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
-    license="BSD-3",
+    license="MIT",
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
