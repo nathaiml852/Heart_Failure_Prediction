@@ -1,8 +1,8 @@
-joblib
-numpy
-pandas
+uvicorn>=0.16.0,<0.18.0
+fastapi>=0.64.0,<1.0.0
+requests>=2.23.0,<2.24.0
 pydantic
-ruamel.yaml
-scikit-learn
-strictyaml
-pyyaml
+pydantic-settings
+
+# If locally copied whl file inside titanic_model_api then use given below
+heartfailure_prediction_model-0.1.0-py3-none-any.whl

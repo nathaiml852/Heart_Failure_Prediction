@@ -1,5 +1,8 @@
 LICENSE
+MANIFEST.in
 README.md
+pyproject.toml
+requirements.txt
 setup.py
 Heartfailure_Prediction_model.egg-info/PKG-INFO
 Heartfailure_Prediction_model.egg-info/SOURCES.txt
@@ -19,6 +22,8 @@ heartfailure_model/processing/data_manager.py
 heartfailure_model/processing/features.py
 heartfailure_model/processing/validation.py
 heartfailure_model/trained_models/__init__.py
+requirements/requirements.txt
+requirements/test_requirements.txt
 tests/test_features.py
 tests/test_predictions.py
 tests/test_transformers.py
