@@ -6,7 +6,7 @@ sys.path.append(str(root))
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from heartfailure_model.config.core import config
 from heartfailure_model.pipeline import heartfailure_pipe 
 from heartfailure_model.processing.data_manager import load_dataset, save_pipeline
@@ -54,8 +54,10 @@ def run_training() -> None:
 
         # **Predictions & Evaluation**
         y_pred = heartfailure_pipe.predict(X_test)
-        print(f"R2 score: {r2_score(y_test, y_pred):.4f}")
-        print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.4f}")
+        print(f"Accuracy {accuracy_score(y_test, y_pred):.4f}")
+        print(f"F1 Score: {f1_score(y_test, y_pred):.4f}")
+        print(f"Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+        print(f"Classification Report:\n", classification_report(y_test, y_pred))
 
         # **Save the trained model**
         save_pipeline(pipeline_to_persist=heartfailure_pipe)

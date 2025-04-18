@@ -6,7 +6,7 @@ sys.path.append(str(root))
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 
 from heartfailure_model.config.core import config
 from heartfailure_model.processing.features import Mapper
@@ -35,7 +35,7 @@ heartfailure_pipe = Pipeline([
     ('scaler', StandardScaler()),
 
     # **Model Training**
-    ('model_rf', RandomForestRegressor(n_estimators=config.model_config_.n_estimators, 
+    ('model_rf', RandomForestClassifier(n_estimators=config.model_config_.n_estimators, 
                                         max_depth=config.model_config_.max_depth,
                                         random_state=config.model_config_.random_state))
 

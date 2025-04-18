@@ -51,16 +51,16 @@ def make_prediction(*,input_data:Union[pd.DataFrame, dict]) -> dict:
 
 if __name__ == "__main__":
     data_in = {
-    'age': [40],
+    'age': [53],
     'sex': ["M"],
-    'chestpaintype': ["ATA"],
+    'chestpaintype': ["ASY"],
     'restingbp': [120],
-    'cholesterol': [250],
+    'cholesterol': [246],
     'fastingbs': [0],
     'restingecg': ["Normal"],
-    'maxhr': [150],
-    'exerciseangina': ["N"],
-    'oldpeak': [2.0],
+    'maxhr': [116],
+    'exerciseangina': ["Y"],
+    'oldpeak': [0],
     'st_slope': ["Flat"]
 }
     input_data = pd.DataFrame(data_in)
