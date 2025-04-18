@@ -1,22 +1,20 @@
-# Use slim Python image
+# pull python base image
 FROM python:3.10-slim
 
-# Set working directory
-WORKDIR /heartfailure_model_api
+# copy application files
+ADD /titanic_model_api /titanic_model_api/
 
+# specify working directory
+WORKDIR /titanic_model_api
 
-# Copy the requirements file from outside the API folder
-COPY ./requirements/requirements.txt .
+# update pip
+RUN pip install --upgrade pip
 
-# Upgrade pip and install dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# install dependencies
+RUN pip install -r requirements.txt
 
-# Copy all application code
-COPY ./heartfailure_model_api/ .
-
-# Expose the FastAPI port
+# expose port for application
 EXPOSE 8001
 
-# Run FastAPI app using uvicorn
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8001"]
+# start fastapi application
+CMD ["python", "app/main.py"]
