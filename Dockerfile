@@ -2,10 +2,10 @@
 FROM python:3.10-slim
 
 # copy application files
-ADD /titanic_model_api /titanic_model_api/
+ADD /heartfailure_model_api /heartfailure_model_api/
 
 # specify working directory
-WORKDIR /titanic_model_api
+WORKDIR /heartfailure_model_api
 
 # update pip
 RUN pip install --upgrade pip
