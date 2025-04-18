@@ -30,10 +30,9 @@ with open(PACKAGE_DIR / "VERSION") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
-
 # What packages are required for this module to be executed?
 def list_reqs(fname="requirements.txt"):
-    with open(fname) as fd:
+    with open(REQUIREMENTS_DIR / fname) as fd:
         return fd.read().splitlines()
 
 # Where the magic happens:
